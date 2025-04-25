@@ -11,7 +11,7 @@
 
 - 🗓 Created – 2025-04-25
 
-- 🧪 Technologies Used – HTML, CSS
+- 🧪 Technologies Used – HTML, CSS (Grid + Responsive)
 
 - 🧑‍💻 Role – Frontend Developer
 
