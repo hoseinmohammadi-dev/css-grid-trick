@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(45deg, #190f2c, #200b30);
+    padding: 15px;
+    /* position: relative; */
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        &:nth-of-type(2) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        &:nth-of-type(7) {
+            grid-column: span 2;
+        }
+
+        &:nth-of-type(10) {
+            grid-row: span 2;
+        }
+
+        &:nth-of-type(12) {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        &:nth-of-type(15) {
+            grid-column: span 2;
+        }
+    }
+}
+
+
+/* info hosein */
+
+.hosein{
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+
+    >div {
+        width: 180px;
+        height: 180px;
+
+        >img {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+    }
+
+    &:hover {
+        >a {
+            >i {
+                opacity: .5;
+                visibility: visible;
+            }
+        }
+    }
+
+    >a {
+        >i {
+            font-size: 28px;
+            color: #965124;
+            transition: .7s;
+            position: absolute;
+            visibility: hidden;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &:nth-of-type(1) {
+            >i {
+                top: -10px;
+                left: -38px;
+            }
+        }
+
+        &:nth-of-type(2) {
+            >i {
+                top: 40px;
+                left: -60px;
+            }
+        }
+
+        &:nth-of-type(3) {
+            >i {
+                top: 90px;
+                left: -60px;
+            }
+        }
+
+        &:nth-of-type(4) {
+            >i {
+                top: 130px;
+                left: -38px;
+            }
+        }
+    }
+}
