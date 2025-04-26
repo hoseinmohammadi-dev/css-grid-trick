@@ -79,7 +79,7 @@ body {
     &:hover {
         >a {
             >i {
-                opacity: .5;
+                opacity: 1;
                 visibility: visible;
             }
         }
@@ -94,7 +94,7 @@ body {
             visibility: hidden;
 
             &:hover {
-                opacity: 1;
+                opacity: .7;
             }
         }
 
