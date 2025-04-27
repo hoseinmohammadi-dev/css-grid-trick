@@ -58,20 +58,47 @@ body {
 
 /* info hosein */
 
-.hosein{
+.hosein {
     position: fixed;
     bottom: 0px;
     right: 10px;
+    border-radius: 50%;
 
-    >div {
+    .circle {
         width: 180px;
         height: 180px;
+        transition: .7s;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 175px;
+            height: 175px;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            transition: .7s;
+            rotate: 10deg;
+        }
+
+        &::before {
+            background-color: #965124;
+            border-radius: 30% 70% 35% 65% / 30% 36% 64% 70%;
+            z-index: -998;
+        }
+
+        &::after {
+            background-color: #5f6166;
+            border-radius: 64% 36% 61% 39% / 43% 36% 64% 57%;
+            z-index: -999;
+        }
 
         >img {
             width: 165px;
             height: 165px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: bottom;
         }
 
     }
@@ -79,8 +106,17 @@ body {
     &:hover {
         >a {
             >i {
-                opacity: 1;
+                color: #965124;
+                /* opacity: 1; */
                 visibility: visible;
+            }
+        }
+
+        .circle {
+
+            &::before,
+            &::after {
+                rotate: 45deg;
             }
         }
     }
@@ -88,41 +124,41 @@ body {
     >a {
         >i {
             font-size: 28px;
-            color: #965124;
+            color: #5f6166;
             transition: .7s;
             position: absolute;
             visibility: hidden;
 
             &:hover {
-                opacity: .7;
+                color: #5f6166;
             }
         }
 
         &:nth-of-type(1) {
             >i {
-                top: -10px;
-                left: -38px;
+                top: -5px;
+                left: -30px;
             }
         }
 
         &:nth-of-type(2) {
             >i {
-                top: 40px;
-                left: -60px;
+                top: 35px;
+                left: -52px;
             }
         }
 
         &:nth-of-type(3) {
             >i {
-                top: 90px;
-                left: -60px;
+                top: 85px;
+                left: -52px;
             }
         }
 
         &:nth-of-type(4) {
             >i {
-                top: 130px;
-                left: -38px;
+                top: 125px;
+                left: -30px;
             }
         }
     }
